@@ -1,0 +1,110 @@
+<%- include('./partials/head.ejs') %>
+
+<div class="homePage">
+  <a href="/" class="homePageButton"> Startpagina </a> | Proces
+</div>
+<div class="pageTitel">
+  <h1>Proces</h1>
+</div>
+<div class="subTitel">
+  <h2>
+    Uit de test komt dat een 3-staps schema voor het geven van pinda het beste
+    past bij jouw Mini
+  </h2>
+</div>
+<div class="flex">
+  <div class="box1">
+    <h3>Thuis 3-staps schema voor het geven van pinda</h3>
+    <p>
+      Als je baby jonger is dan 8 maanden en er geen risicofactoren zijn zoals
+      eczeem of eerdere reacties op voeding, dan kun je thuis pinda’s geven in 3
+      stappen.
+    </p>
+    <p>
+      Hiervoor kun je ons product mijn eerste pinda in 3 stappen
+      aanschaffen.<strong> Mijn eerste pinda in 3 stappen</strong> bevat 3
+      zakjes met de juiste dosering pindameel. Zo kun je veilig per stap
+      bekijken hoe jouw Mini reageert op het eten van pinda.
+    </p>
+    <p>
+      - Hierbij hoef je niet zelf de stapjes af te meten, maar is de exacte
+      hoeveelheid voor je afgewogen.
+    </p>
+    <p>
+      - De producten zijn hoog in eiwitgehalte waardoor je minder grote
+      hoeveelheden nodig hebt.
+    </p>
+    <p>- Al onze producten zijn zonder toevoeging van zout en suiker.</p>
+    <p>
+      We willen jullie zo een gezonde, makkelijke en betrouwbare oplossing
+      bieden voor jouw MINI.
+    </p>
+    <div class="stukjeTekstColor">
+      <a href="/producten">Koop hier onze producten!</a>
+    </div>
+  </div>
+
+  <div class="box2">
+    <h3>Thuis 3-staps schema voor het geven van ei</h3>
+    <p>
+      Als je baby tussen de 4 en 8 maanden is; en er geen risicofactoren zijn
+      zoals eczeem of eerdere reacties op voeding, dan kun je thuis ei geven via
+      dit schema.
+    </p>
+    <p>
+      Je voegt dan gedurende 3 dagen, in 3 stappen, oplopende hoeveelheden gaar
+      ei toe aan het babyhapje. Hiervoor kun je dit schema gebruiken, opgesteld
+      conform de richtlijnen van DAVO-diëtisten en ook te vinden op de website
+      van het Voedingscentrum.
+    </p>
+  </div>
+  <div class="box3">
+    <div class="reminder">
+      <h3>Reminder</h3>
+      <ul class="ul">
+        <li>
+          25/08 Jouw Mini ... (CHECK <a href="agenda.ejs">Agenda</a>)
+          <p>a day ago - reminder</p>
+        </li>
+        <li>
+          14/08 Jouw Mini krijgt .. (CHECK <a href="">Agenda</a>)
+          <p>1 week ago - reminder</p>
+        </li>
+        <li>
+          07/08 Mama'S Meeting (CHECK <a href="">Agenda</a>)
+          <p>2 weeks ago - reminder</p>
+        </li>
+        <li>
+          02/08 Krijgt jouw min (CHECK <a href="">Agenda</a>)
+          <p>3 weeks ago - reminder</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- APPART CODE ????? FOR CHAT IDON'T REMEMBER -->
+  <!-- <div class="box4"></div> -->
+<button class="open-button" onclick="openForm()">Vraag Vini-Mini</button>
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h3>Chat</h3>
+    <label for="msg"><b></b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">
+      Close
+    </button>
+  </form>
+</div>
+
+<script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+</script>
+
+<%- include('./partials/foot.ejs') %>

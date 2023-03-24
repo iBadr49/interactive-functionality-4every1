@@ -1,0 +1,29 @@
+<%- include('./partials/head.ejs') %>
+
+<div class="homePage">
+  <a href="/" class="homePageButton"> Startpagina </a> | Producten
+</div>
+
+<H1 class="pageTitel">Producten</H1>
+<!-- alles hieronder behalve de image komt uit de vinimini APi -->
+<!-- For Each loop "Producten" -->
+<section class="productContainer">
+  <% producten.forEach(product=> { %>
+  <article>
+    <!-- Product Categorie titel -->
+    <h2><%= product.categorie.titel %></h2>
+    <a>
+      <!-- For nu heb ik een image gebruikt voor alle producten later ga ik dat veranderen -->
+      <img
+        src="assets/productImage.jpg"
+        alt="productImage"
+        class="productImage"
+    /></a>
+    <!-- Product titel&prijs gehaald -->
+    <p><%= product.titel %></p>
+    $ <%= product.prijs %>
+  </article>
+  <% }) %>
+</section>
+
+<%- include('./partials/foot.ejs') %>

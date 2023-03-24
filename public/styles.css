@@ -1,0 +1,614 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --font: "Montserrat";
+  --yellow: #f4eb34;
+  --lightGreen: #72a7a5;
+  --white: white;
+  --black: black;
+  --red: red;
+}
+
+/*---- MediaQuery -- RESPONSIVE!! ---- */
+
+ @media all and (min-width: 1024px) {
+  .menuBurger {
+    display: none;
+  }
+  header, nav{
+    justify-content: center !important;
+  }
+} 
+
+@media only screen and (max-width: 1024px) {
+  header nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .productContainer{
+    grid-template-columns: repeat(2, 1fr) !important;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .advies {
+    justify-items: center;
+  }
+  .productContainer{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important;
+    text-align: center;
+  }
+} 
+
+/* -- Body -- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+  background-color: #fafafa;
+}
+
+/*- - Startpagina - "Button" - -*/
+
+.homePage {
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+  color: var(--black);
+  font-size: 14px;
+}
+
+.homePageButton {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a.homePageButton {
+  color: var(--black);
+}
+
+a:hover {
+  color: var(--lightGreen);
+}
+
+/* -- Navbar -- */
+
+header {
+  background-color: var(--white);
+  padding: 10px;
+  font-family: var(--font);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+header ul {
+  display: flex;
+  margin-left: 150px;
+  list-style: none;
+}
+
+header ul li {
+  margin-left: 50px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+}
+
+.menuBurger {
+  margin: 0;
+  padding: 0;
+  align-items: end;
+}
+
+.mini {
+  color: var(--lightGreen);
+  list-style: none;
+}
+
+a,
+.mini {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*----- BUTTONS Style -----*/
+
+.middle {
+  position: absolute;
+  margin-top: 1rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  background-color: var(--lightGreen);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 27.5px;
+  z-index: -1;
+}
+
+.btn {
+  font-family: var(--font);
+  background: var(--lightGreen);
+  border-radius: 27.5px;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  min-width: 200px;
+  margin: 10px;
+  cursor: pointer;
+  transition: color 0.4s linear;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  font-size: 15px;
+  color: var(--white);
+}
+
+.btn:hover {
+  color: var(--black);
+}
+
+.homePageBackground,
+.middle > .btn:hover {
+  background-color: var(--lightGreen);
+}
+
+.homePageBackground,
+.middle > .btn::before {
+  content: "";
+  position: absolute;
+  background-color: #fafafa;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.homePageBackground,
+.middle > h1 {
+  color: var(--black);
+}
+
+/*-------------- ProcesPage ------------------*/
+
+.pageTitel {
+  margin: 1rem;
+  text-align: center;
+  color: var(--lightGreen);
+}
+.subTitel{
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: clamp(2rem, 4vw, 10rem);
+}
+
+.box1,
+.box2 {
+  border-radius: 7px;
+  align-items: center;
+  align-content: center;
+  width: 30%;
+  min-width: 280px;
+  flex-grow: 1;
+}
+
+.box3 {
+  width: 30%;
+  min-width: 280px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.checkmark {
+  text-align: center;
+}
+
+.inputForm {
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  width: 4vw;
+}
+
+/* ----------------------- */
+
+
+
+/* --------- Reminder --------- */
+.reminder h3 {
+  margin-left: 30%;
+  font-size: 20px;
+  color: var(--black);
+}
+
+.reminder ul {
+  list-style-type: none;
+  font-size: 14px;
+  background-color: var(--white);
+  padding: 15px 20px 20px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.reminder li {
+  border-left: 5px solid var(--lightGreen);
+  padding-left: 10px;
+  padding-bottom: 2px;
+  margin-bottom: 14px;
+}
+
+.reminder p {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #666;
+  font-size: 13px;
+}
+
+
+/* --- CHATBOX --- /
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: var(--lightGreen);
+  color: var(--white);
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 40px;
+  width: 260px;
+  border-radius: 45px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 40px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.chat-popup h3 {
+  text-align: center;
+  color: #72afa6;
+}
+
+/* Add styles to the form container */
+.form-container {
+  width: 246px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: rgb(231, 229, 229);
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04aa6d;
+  color: var(--white);
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 96%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+/* ------------ AgendaPage -------------- */
+
+.logboek,
+.advies {
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px var(--lightGreen);
+  /*margin-bottom: 15px;
+  margin: 20px;*/
+  padding: 10px;
+}
+
+.logboek p {
+  margin: 14px;
+}
+
+/* Logboek H1 & H2 */
+
+.logboek h1 {
+  color: var(--lightGreen);
+  text-align: center;
+}
+.logboek h2 {
+  text-align: center;
+}
+
+/* ----- Fieldset ---- */
+fieldset {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  margin-bottom: 1em;
+  background: #e4f2f2;
+  border: 1px solid #b5dbdc;
+}
+legend,
+legend span {
+  color: #000;
+}
+
+legend span {
+  background-color: #004f44;
+  border-radius: 50%;
+  display: inline-block;
+  padding: 0.25rem;
+  font-size: 1em;
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  color: white;
+}
+input {
+  width: 15%;
+}
+textarea {
+  width: 90%;
+}
+/* declare a 7 column grid on the table */
+#calendar {
+  margin-left: 10%;  
+  margin-bottom: 10%;
+  width: 80%;
+  /*margin:0 auto;*/
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+#calendar tr, #calendar tbody {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 100%;
+}
+
+caption {
+  text-align: center;
+  grid-column: 1 / -1;
+  font-size: 130%;
+  font-weight: bold;
+  padding: 30px;
+}
+
+#calendar a {
+	text-decoration: none;
+}
+
+#calendar td, #calendar th {
+	padding: 4px;
+	box-sizing:border-box;
+	border: 4px solid #ccc;
+}
+
+#calendar .weekdays {
+	background: var(--lightGroen);  
+}
+
+#calendar .weekdays th {
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 20px;
+	border: none;
+	padding: 10px 6px;
+	font-size: 13px;
+}
+
+#calendar td {
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+}
+
+#calendar .days li:hover {
+	background: #d3d3d3;
+}
+
+#calendar .date {
+	text-align: center;
+	margin-bottom: 5px;
+	padding: 4px;
+	background: #72afa6;
+	color: #fff;
+	width: 20px;
+	border-radius: 50%;
+    flex: 0 0 auto;
+    align-self: flex-end;
+}
+
+#calendar .event {
+  flex: 0 0 auto;
+	font-size: 13px;
+	border-radius: 4px;
+	padding: 5px;
+	margin-bottom: 5px;
+	line-height: 14px;
+	background: #e4f2f2;
+	border: 1px solid #b5dbdc;
+	color: #009aaf;
+	text-decoration: none;
+}
+
+#calendar .event-desc {
+	color: #666;
+	margin: 3px 0 7px 0;
+	text-decoration: none;	
+}
+
+#calendar .other-month {
+	background: #f5f5f5;
+	color: #666;
+}
+
+/* ============================
+				Mobile Responsiveness  Agenda
+   ============================*/
+
+@media(max-width: 768px) {
+
+	#calendar .weekdays, #calendar .other-month {
+		display: none;
+	}
+
+	#calendar li {
+		height: auto;
+		border: 1px solid #ededed;
+		width: 100%;
+		padding: 10px;
+		margin-bottom: -1px;
+	}
+  
+  #calendar, #calendar tr, #calendar tbody {
+    grid-template-columns: 1fr;
+  }
+  
+  #calendar  tr {
+    grid-column: 1 / 2;
+  }
+
+	#calendar .date {
+		align-self: flex-start;
+	}
+}
+
+/* ------ Color ------- */
+
+.stukjeTextColor {
+  color: var(--lightGreen);
+}
+
+.container {
+  width: 23vw;
+}
+
+.logboek {
+  margin: 0 auto;
+  width: 80%;
+  margin-bottom: 150px;
+}
+
+.logboek,
+.inputForm {
+  justify-content: left;
+}
+
+.input1 {
+  height: auto;
+  transition: ease 0.5s;
+}
+
+
+/* --- Dit is voor JS code --- */
+.inputOn {
+  height: 50vh;
+}
+
+.test {
+  display: none;
+}
+/* --- END JS ---- */
+
+/* ---- Notitie ---- */
+
+.note{
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px var(--lightGreen);
+  padding: 10px;
+  margin: 14px;
+  margin: 0 auto;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.notitieFieldset{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(1, 3fr);
+  background-color: rgba(0, 0, 0, 0.1);
+  border: none;
+  margin-bottom: 1em;
+  background: #e4f2f2;
+  border: 1px solid #b5dbdc;
+}
+
+
+.note h1{
+  text-align: center;
+  color: var(--lightGreen);
+}
+
+/* --- Product pagina --- */
+
+.productContainer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px var(--lightGreen);
+  margin: 20px;
+  padding: 20px;
+}
+
+.productImage {
+  width: 40%;
+  height: auto;
+}
+
+
