@@ -9,44 +9,6 @@
   --red: red;
 }
 
-/*---- MediaQuery -- RESPONSIVE!! ---- */
-
- @media all and (min-width: 1024px) {
-  .menuBurger {
-    display: none;
-  }
-  header, nav{
-    justify-content: center !important;
-  }
-} 
-
-@media only screen and (max-width: 1024px) {
-  header nav {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  .productContainer{
-    grid-template-columns: repeat(2, 1fr) !important;
-    text-align: center;
-  }
-}
-
-@media only screen and (max-width: 500px) {
-  .advies {
-    justify-items: center;
-  }
-  .productContainer{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr) !important;
-    text-align: center;
-  }
-} 
 
 /* -- Body -- */
 
@@ -83,32 +45,25 @@ a:hover {
 
 header {
   background-color: var(--white);
-  padding: 10px;
+  padding: 5px;
   font-family: var(--font);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 } 
 
 header ul {
-  display: flex;
-  margin-left: 150px;
   list-style: none;
 }
 
-header ul li {
-  margin-left: 50px;
-  font-size: 15px;
-  display: flex;
-  flex-direction: row; 
-  align-items: center;
+@media all and (min-width: 700px) {
+  header ul {
+    display: flex;
+  }
 }
 
-.menuBurger {
-  margin: 0;
-  padding: 0;
-  align-items: end;
+header ul li {
+  font-size: 15px;
+  margin: 1em;
 }
 
 .mini {
@@ -221,6 +176,8 @@ a,
   min-width: 280px;
   flex-grow: 1;
   overflow-y: auto;
+  overflow-x: auto;
+  
 }
 
 .checkmark {
@@ -242,7 +199,7 @@ a,
 
 /* --------- Reminder --------- */
 .reminder h3 {
-  margin-left: 30%;
+  text-align: center;
   font-size: 20px;
   color: var(--black);
 }
@@ -266,7 +223,7 @@ a,
 .reminder p {
   margin-top: 0;
   margin-bottom: 0;
-  color: #666;
+  color: var(--lightGreen);
   font-size: 13px;
 }
 
@@ -285,7 +242,8 @@ a,
   right: 40px;
   width: 260px;
   border-radius: 45px;
-}
+  margin-bottom: 1em;
+}  
 
 /* The popup chat - hidden by default */
 .chat-popup {
@@ -295,11 +253,13 @@ a,
   right: 40px;
   border: 3px solid #f1f1f1;
   z-index: 9;
+  margin-bottom: 1em;
+  
 }
 
 .chat-popup h3 {
   text-align: center;
-  color: #72afa6;
+  color: var(--lightGreen);
 }
 
 /* Add styles to the form container */
@@ -373,7 +333,7 @@ a,
   text-align: center;
 }
 
-/* ----- Fieldset ---- */
+/* Logboek Formulier */
 fieldset {
   background-color: rgba(0, 0, 0, 0.1);
   border: none;
@@ -397,13 +357,14 @@ legend span {
   text-align: center;
   color: white;
 }
-input {
+.input {
   width: 15%;
 }
 textarea {
-  width: 90%;
+  width: 98%;
 }
-/* declare a 7 column grid on the table */
+
+/* A 7 column grid on the table */
 #calendar {
   margin-left: 10%;  
   margin-bottom: 10%;
@@ -439,7 +400,7 @@ caption {
 }
 
 #calendar .weekdays {
-	background: var(--lightGroen);  
+	background: var(--lightGreen);  
 }
 
 #calendar .weekdays th {
@@ -448,6 +409,7 @@ caption {
 	line-height: 20px;
 	border: none;
 	padding: 10px 6px;
+	color: #fff;
 	font-size: 13px;
 }
 
@@ -498,7 +460,7 @@ caption {
 }
 
 /* ============================
-				Mobile Responsiveness  Agenda
+				Mobile Responsiveness  START
    ============================*/
 
 @media(max-width: 768px) {
@@ -528,12 +490,14 @@ caption {
 	}
 }
 
-/* ------ Color ------- */
+/* ============================
+				Mobile Responsiveness END
+   ============================*/
 
+/* ------ Color ------- */
 .stukjeTextColor {
   color: var(--lightGreen);
 }
-
 .container {
   width: 23vw;
 }
@@ -553,7 +517,6 @@ caption {
   height: auto;
   transition: ease 0.5s;
 }
-
 
 /* --- Dit is voor JS code --- */
 .inputOn {
@@ -596,19 +559,37 @@ caption {
 }
 
 /* --- Product pagina --- */
+/* --- Product pagina --- */
 
 .productContainer{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  --columns: 1;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  text-align: center;
   border-radius: 10px;
   box-shadow: 2px 2px 20px var(--lightGreen);
   margin: 20px;
   padding: 20px;
 }
 
+/*---- MediaQuery -- RESPONSIVE!! ---- */
+@media all and (min-width: 500px) {
+  .productContainer{
+    --columns: 2;
+  }
+}
+@media all and (min-width: 700px) {
+  .productContainer{
+    --columns: 3;
+  }
+}
+@media all and (min-width: 1024px) {
+  .productContainer{
+    --columns: 4;
+  }
+}
+
 .productImage {
   width: 40%;
   height: auto;
 }
-
-

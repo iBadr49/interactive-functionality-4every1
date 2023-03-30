@@ -188,7 +188,7 @@
     </td>
   </tr>
 </table>
-<br />
+
 <div class="logboek">
   <h1>Logboek</h1>
   <h2>Beschrijf eerlijk hoe het ging met jouw Ali</h2>
@@ -206,7 +206,6 @@
     <input type="submit" value="Submit" />
     <p class="test">Hier komen andere vragen!!</p>
   </fieldset>
-  <br />
 
   <fieldset>
     <div class="inputForm">
@@ -220,53 +219,42 @@
     <textarea id="question" placeholder=" Vul hier hoe het ging?"></textarea>
     <input type="submit" value="Submit" />
   </fieldset>
-
-  <fieldset>
-    <div class="inputForm">
-      <input class="input" type="checkbox" />
-      <label class="container">23-12-2022</label>
-      <span class="checkmark"></span>
-    </div>
-    <p>Vandaag heeft Ali ....</p>
-    <legend><span>3</span></legend>
-    <label for="question"></label>
-    <textarea id="question" placeholder=" Vul hier hoe het ging?"></textarea>
-    <input type="submit" value="Submit" />
-  </fieldset>
 </div>
 
 <div class="note">
   <h1>Mini Notities</h1>
 
   <% if (typeof(error) != 'undefined') { %>
-    <strong>Er ging iets mis!</strong>
+  <strong>Er ging iets mis!</strong>
   <% } %>
-  
+
   <div class="form">
-  <form action="/agenda" method="post">
+    <form action="/agenda" method="post">
+      <fieldset class="notitieFieldset">
+        <label>
+          Titel <span>(Notitie Titel)</span>
+          <input type="text" required name="titel" />
+        </label>
 
-  <fieldset class="notitieFieldset">
-    <label> Titel <span>(Notitie Titel)</span>
-      <input type="text" required name="titel">
-    </label>
+        <label
+          >Notitie
+          <input type="text" required name="beschrijving" />
+        </label>
 
-    <label>Notitie 
-      <input type="text" required name="beschrijving">
-    </label>
+        <label
+          >Datum
+          <input type="datetime-local" required name="datum" />
+        </label>
 
-    <label>Datum 
-      <input type="datetime-local" required name="datum">
-    </label>
+        <label
+          >Herinnering
+          <input type="datetime-local" required name="herinnering" />
+        </label>
+      </fieldset>
 
-    <label>Herinnering 
-      <input type="datetime-local" required name="herinnering">
-    </label>
-  </fieldset>
-
-    <button type="submit">Toevoegen</button>
-  </form>
-  
-</div>
+      <button type="submit">Toevoegen</button>
+    </form>
+  </div>
 </div>
 
 <%- include('./partials/foot.ejs') %>
