@@ -364,6 +364,21 @@ textarea {
   width: 98%;
 }
 
+/* Mini Notitie InpuT:Focus Van Joost demo2 Voorbeeld */
+
+#input {
+margin-left: 6px;
+}
+
+#input:focus{
+  outline: none;
+  transform: scale(1.04);
+}
+
+#input {
+  border: 1px var(--black) solid;
+}
+
 /* A 7 column grid on the table */
 #calendar {
   margin-left: 10%;  
