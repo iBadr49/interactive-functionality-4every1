@@ -41,7 +41,7 @@ app.get('/agenda', (request, response) => {
     })
   })
 
-  // Post note to API
+  // Post note (notitie) to API
   app.post('/agenda', function (req, res, next) {
 
     req.body.afgerond = false
