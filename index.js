@@ -16,7 +16,6 @@ app.use(express.static('public'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-
 // Routes/path gemaakt voor mijn index | proces | agenda pagina's 
 app.get('/', (request, response) => {
   fetchJson(url + '/producten').then((data) => {
@@ -25,50 +24,51 @@ app.get('/', (request, response) => {
 })
 
 app.get('/proces', (request, response) => {
-    response.render('proces')
+  response.render('proces')
+})
+
+app.get('/producten', (request, response) => {
+  fetchJson(url + '/producten').then((data) => {
+    response.render('producten', data)
+    // console.log(data)
   })
-  
+})
+
 app.get('/agenda', (request, response) => {
   fetchJson(url + '/notities').then((data) => {
     response.render('agenda', data)
   })
 })
 
-  app.get('/producten', (request, response) => {
-    fetchJson(url + '/producten').then((data) => {
-      response.render('producten', data)
-      // console.log(data)
-    })
-  })
+// Post note (notitie) to API
+app.post('/agenda', function (req, res, next) {
 
-  // Post note (notitie) to API
-  app.post('/agenda', function (req, res, next) {
+  req.body.afgerond = false
+  //req.body.persoonId = 'clemozv3c3eod0bunahh71sx7'
+  req.body.datum = req.body.datum + ':00Z';
+  req.body.herinnering = [req.body.herinnering + ':00Z']
+  console.log(req.body)
+  
+  postJson(url + '/notities', req.body).then((data) => {
 
-    req.body.afgerond = false
-    req.body.persoonId = 'clemozv3c3eod0bunahh71sx7'
-    req.body.datum = req.body.datum + ':00Z';
-    req.body.herinnering = [req.body.herinnering + ':00Z']
-    console.log(req.body)
-    postJson(url + '/notities', req.body).then((data) => {
+    // console.log(JSON.stringify(data))
 
-      // console.log(JSON.stringify(data))
-
-      let newNotitie = { ... req.body }
+    let newNotitie = { ... req.body }
+    
+    if (data.success) {
+      res.redirect('/agenda') 
+      // TODO: squad meegeven, message meegeven
+      // TODO: Toast meegeven aan de homepagina
+    } else {
+      const errormessage = `${data.message}: Mogelijk komt dit door de slug die al bestaat.`
+      const newdata = { error: errormessage, values: newNotitie }
       
-      if (data.success) {
-        res.redirect('/agenda') 
-        // TODO: squad meegeven, message meegeven
-        // TODO: Toast meegeven aan de homepagina
-      } else {
-        const errormessage = `${data.message}: Mogelijk komt dit door de slug die al bestaat.`
-        const newdata = { error: errormessage, values: newNotitie }
-        
-        res.render('agenda', newdata)
-      }
-    })
-  });
+      res.render('agenda', newdata)
+    }
+  })
+});
 
-  // Stel het poortnummer in en start express
+// Stel het poortnummer in en start express
 app.set('port', process.env.PORT || 8000)
 app.listen(app.get('port'), function () {
   console.log(`Application started on http://localhost:${app.get('port')}`)

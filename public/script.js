@@ -1,3 +1,5 @@
+
+// Dit is temporary | Js code voor de logboek
 const input1 = document.querySelector('.input1');
 const inputOn = document.querySelector('.inputOn');
  input1.addEventListener("click", inputClick);
@@ -10,4 +12,11 @@ function inputClick(){
  paragraph.classList.toggle('test');
 }
 
+// Chat proce pagina
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
 

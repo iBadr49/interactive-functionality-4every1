@@ -189,7 +189,7 @@
   </tr>
 </table>
 
-<div class="logboek">
+<form class="logboek">
   <h1>Logboek</h1>
   <h2>Beschrijf eerlijk hoe het ging met jouw Ali</h2>
 
@@ -219,7 +219,7 @@
     <textarea id="question" placeholder=" Vul hier hoe het ging?"></textarea>
     <input type="submit" value="Submit" />
   </fieldset>
-</div>
+</form>
 
 <div class="note">
   <h1>Mini Notities</h1>
@@ -230,6 +230,7 @@
 
   <div class="form">
     <form action="/agenda" method="post">
+      <input type="hidden" name="persoonId" value="clemozv3c3eod0bunahh71sx7">
       <fieldset class="notitieFieldset">
         <label>
           Titel <span>(Notitie Titel)</span>

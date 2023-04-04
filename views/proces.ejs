@@ -85,9 +85,9 @@
 
 <!-- APPART CODE ????? FOR CHAT IDON'T REMEMBER -->
   <!-- <div class="box4"></div> -->
-<button class="open-button" onclick="openForm()">Vraag Vini-Mini</button>
+<button class="open-button" onclick="openForm()">Vraag ViniMini</button>
 <div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
+  <form action="" class="form-container">
     <h3>Chat</h3>
     <label for="msg"><b></b></label>
     <textarea placeholder="Type message.." name="msg" required></textarea>
@@ -98,13 +98,5 @@
   </form>
 </div>
 
-<script>
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-  }
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
-</script>
 
 <%- include('./partials/foot.ejs') %>
