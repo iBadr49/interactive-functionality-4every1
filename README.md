@@ -23,7 +23,9 @@
 <!--Bij Gebruik staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 
 ## Kenmerken
-### WAT IS ?
+Voor dit project heb ik gebruik gemaakt van ``` node.js ``` | ``` Express ``` | ```Ejs``` | client-side ``` JavaScript ``` .. 
+
+
 - **Progressive Enhancement** is een benadering van webdesign en ontwikkeling die zich richt op het bouwen van de kernfunctionaliteit van een website op een manier die werkt voor alle gebruikers, ongeacht hun apparaat of browsermogelijkheden.
 
 ## Installatie
