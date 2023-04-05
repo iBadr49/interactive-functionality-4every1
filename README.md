@@ -1,8 +1,8 @@
 > _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
-# POSTEN van Notities
+# Vinimini | Mini Notitie
 
-<img src="https://user-images.githubusercontent.com/112857932/230025107-e12fb527-1c95-41f3-8d4f-10a01bfb4792.png" width="100%">
+<img src="https://user-images.githubusercontent.com/112857932/230028878-34d8d2b5-4790-402b-b295-1d36ef34a7a6.png" width="100%">
 
 
 ## Inhoudsopgave
