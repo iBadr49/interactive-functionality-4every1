@@ -571,7 +571,35 @@ caption {
   color: var(--lightGreen);
 }
 
-/* --- Prodduct pagina --- */
+/* Sumbit - Button Style   */
+
+.notitieSubmit {
+  margin: 1px;
+  background-color: #e4f2f2;
+  color: var(--black);
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.notitieSubmit:hover {
+  background-color: #b5dbdc;
+}
+
+.animated {
+  animation-name: animateButton;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animateButton {
+  from { transform: scale(1); }
+  to { transform: scale(1.04); }
+}
+
+/* --- Product pagina --- */
 
 .productContainer{
   display: grid;

@@ -20,3 +20,14 @@ function openForm() {
     document.getElementById("myForm").style.display = "none";
   }
 
+
+// Formulier animatie button (MiniNotitie)
+  var button = document.querySelector('.notitieSubmit');
+
+  button.addEventListener('mouseenter', function() {
+    button.classList.add('animated');
+  });
+
+  button.addEventListener('mouseleave', function() {
+    button.classList.remove('animated');
+  });
