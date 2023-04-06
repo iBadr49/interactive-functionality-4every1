@@ -233,12 +233,12 @@
       <input type="hidden" name="persoonId" value="clemozv3c3eod0bunahh71sx7">
       <fieldset class="notitieFieldset">
         <label>
-          Titel <span>(Notitie Titel)</span>
+          Titel <span>(Notitie)</span>
           <input id="input" type="text" required name="titel" />
         </label>
 
-        <label
-          >Notitie
+        <label>
+          Notitie <span>(Beschrijving)</span>
           <input id="input" type="text" required name="beschrijving" />
         </label>
 
@@ -256,6 +256,18 @@
       <button class="notitieSubmit" type="submit">Toevoegen</button>
     </form>
   </div>
+  <h1> Jouw Notities</h1>
+  <section class="test9">
+    <% notities.forEach(notitie => { %>
+      <article class="test8">
+         <h3>Titel:</h3> 
+         <p> <%= notitie.titel %> </p>
+         <h3>Notitie:</h3> 
+         <p> <%= notitie.beschrijving %></p>    
+       </article>
+         <% }); %>
+  </section>
 </div>
+
 
 <%- include('./partials/foot.ejs') %>

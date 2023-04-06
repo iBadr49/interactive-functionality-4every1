@@ -1,6 +1,6 @@
 import express from 'express'
 
-const url = 'https://api.vinimini.fdnd.nl/api/v1'
+const url = 'https://api.vinimini.fdnd.nl/api/v1/'
 
 // Maak een nieuwe express app
 const app = express()
@@ -35,7 +35,10 @@ app.get('/producten', (request, response) => {
 })
 
 app.get('/agenda', (request, response) => {
-  fetchJson(url + '/notities').then((data) => {
+  const url2 = 'notities?id=clemozv3c3eod0bunahh71sx7'
+  const notitieUrl = url + url2 
+  
+  fetchJson(notitieUrl).then((data) => {
     response.render('agenda', data)
   })
 })
