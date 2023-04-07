@@ -121,7 +121,7 @@ app.post('/agenda', function (req, res, next) {
   })
 });
 ```
-- Css
+- Css Styling 
 ```css
 .note{
   border-radius: 10px;
@@ -155,7 +155,7 @@ Clone of download deze respository. Open hem in je code-editor (Visal Studio Cod
 
 ## Bronnen
 - Workshops
-- Suus codepen (kanvlink niet meer vinden)
+- Suus codepen (kan link niet meer vinden)
 - Hulp van Krijn "docent"
 
 ## Licentie
