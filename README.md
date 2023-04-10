@@ -155,8 +155,8 @@ Clone of download deze respository. Open hem in je code-editor (Visal Studio Cod
 
 ## Bronnen
 - Workshops
-- Suus codepen (kan link niet meer vinden)
-- Hulp van Krijn "docent"
+- Codepen "https://codepen.io/solideagency/pen/JjZLyOQ?editors=1000"
+- Krijn "docent"
 
 ## Licentie
 
