@@ -5,7 +5,7 @@
 <img src="https://user-images.githubusercontent.com/112857932/230028878-34d8d2b5-4790-402b-b295-1d36ef34a7a6.png" width="100%">
 
 
-## Inhoudsopgave
+## 📚 Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
   * [Gebruik](#gebruik)
@@ -151,11 +151,11 @@ app.post('/agenda', function (req, res, next) {
 ```
 
 ## Installatie
-Clone of download deze respository. Open hem in je code-editor (Visal Studio Code). Open de terminal en typ npm install, daarna kun je door middel van npm start een localhost krijgen met een link waar je de live site kunt bekijken. Maar om dit te kunnen werken moet je eerst node.org downloaden.
+Ga eerst naar nodejs.org en installeer de Node ontwikkelomgeving. Voor dit project heb ik gebruik gemaakt van 18.14.0 LTS, download de benodigde bestanden en doorloop het installatieproces. Daarna open Visual Studio Code - terminal en installeer Node doormiddel van het commando npm innit, voer hierna npm install uit, om de pagina te open start je een server op door middel van npm start en als de server weer gesloten moet worden kan je control + c / ^c gebruiken op mac.
 
 ## Bronnen
-- Workshops
-- Codepen "https://codepen.io/solideagency/pen/JjZLyOQ?editors=1000"
+- Stof | Workshops
+- Codepen | "https://codepen.io/solideagency/pen/JjZLyOQ?editors=1000"
 - Krijn "docent"
 
 ## Licentie
